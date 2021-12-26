@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from preview.colorlib.com/theme/avo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Dec 2021 05:08:15 GMT -->
+  <head>
+    {% block title %}
+
+    <title>Home</title>
+
+    {% endblock title %}
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+
+    {% block css %} {% endblock css %}
+
+    <script>
+      (function (w, d) {
+        !(function (e, t, r, a, s) {
+          (e[r] = e[r] || {}),
+            (e[r].executed = []),
+            (e.zaraz = { deferred: [] });
+          var n = t.getElementsByTagName("title")[0];
+          (e[r].c = t.cookie),
+            n && (e[r].t = t.getElementsByTagName("title")[0].text),
+            (e[r].w = e.screen.width),
+            (e[r].h = e.screen.height),
+            (e[r].j = e.innerHeight),
+            (e[r].e = e.innerWidth),
+            (e[r].l = e.location.href),
+            (e[r].r = t.referrer),
+            (e[r].k = e.screen.colorDepth),
+            (e[r].n = t.characterSet),
+            (e[r].o = new Date().getTimezoneOffset()), //
+            (e[s] = e[s] || []),
+            (e.zaraz._preTrack = []),
+            (e.zaraz.track = (t, r) => e.zaraz._preTrack.push([t, r])),
+            e[s].push({ "zaraz.start": new Date().getTime() });
+          var i = t.getElementsByTagName(a)[0],
+            o = t.createElement(a);
+          (o.defer = !0),
+            (o.src =
+              "../../cdn-cgi/zaraz/sd41d.js?" +
+              new URLSearchParams(e[r]).toString()),
+            i.parentNode.insertBefore(o, i);
+        })(w, d, "zarazData", "script", "dataLayer");
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <nav
+      class="
+        navbar navbar-expand-lg navbar-dark
+        ftco_navbar
+        bg-dark
+        ftco-navbar-light
+      "
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">a<span>v</span>o</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item  {% if page == 'home' %} active {% endif %}">
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item {% if page == 'about' %} active {% endif %} ">
+              <a href="{% url 'about' %}" class="nav-link">About</a>
+            </li>
+            <li class="nav-item {% if page == 'work' %} active {% endif %}">
+              <a href="{% url 'work' %}" class="nav-link">Work</a>
+            </li>
+            <li class="nav-item {% if page == 'blog' %} active {% endif %}">
+              <a href="{% url 'blog' %}" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item {% if page == 'contact' %} active {% endif %}">
+              <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block body %} {% endblock body %}
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js.pagespeed.jc.0gJBlxkQT_.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_M5$Z_0KsWp);
+    </script>
+    <script>
+      eval(mod_pagespeed_0hA2$BHsIt);
+    </script>
+    <script>
+      eval(mod_pagespeed_RcsjZSMgua);
+    </script>
+    <script src="{% static 'js/jquery.easing.1.3.js%2bjquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js.pagespeed.jc.S7cjLoA5D0.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_QLOUfbver8);
+    </script>
+    <script>
+      eval(mod_pagespeed_BfsIZzPF9N);
+    </script>
+    <script>
+      eval(mod_pagespeed_fh3$qFVsNr);
+    </script>
+    <script>
+      eval(mod_pagespeed_h8MNi4a7_A);
+    </script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js%2bjquery.animateNumber.min.js%2bscrollax.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.YjcJrKRauu.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_SW11miKjAA);
+    </script>
+    <script>
+      eval(mod_pagespeed_ongfIjYQZS);
+    </script>
+    <script>
+      eval(mod_pagespeed_pJDzbYKOt0);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+    <script>
+      eval(mod_pagespeed_LoxC4dcgwf);
+    </script>
+    <script>
+      eval(mod_pagespeed_ofjEU$d2ws);
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+      integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+      data-cf-beacon='{"rayId":"6c274f80ff853971","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
