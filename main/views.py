@@ -1,15 +1,20 @@
 from django.shortcuts import render
-
+from .models import Work, ExpertTeam, Client
 # Create your views here.
 
 def home(request):
-    return render(request,'main/index.html', {"page": "home"})
+    wd = Work.objects.all()
+    cd = Client.objects.all()
+    return render(request,'main/index.html', {"page": "home", "work":wd , "client":cd})
 
 def about(request):
-    return render(request,'main/about.html', {"page": "about"})
+    cd = Client.objects.all()
+    expertData = ExpertTeam.objects.all()
+    return render(request,'main/about.html', {"page": "about", "ed":expertData,"client":cd })
 
 def work(request):
-    return render(request,'main/work.html', {"page": "work"})
+    wd = Work.objects.all()
+    return render(request,'main/work.html', {"page": "work",'wd':wd})
 
 def blog(request):
     return render(request,'main/blog.html', {"page": "blog"})
@@ -19,3 +24,6 @@ def blog_single(request):
 
 def contact(request):
     return render(request,'main/contact.html', {"page": "contact"})
+
+
+    

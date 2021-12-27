@@ -267,296 +267,46 @@
           <h2 class="mb-2">Our Works</h2>
         </div>
       </div>
+     
+     
+      {% for workData in work %}
       <div class="container">
         <div class="row no-gutters">
+        
           <div class="col-md-12 portfolio-wrap mt-0">
             <div class="row no-gutters align-items-center">
               <div
                 class="col-md-5 img"
-                style="background-image: url('{% static 'images/work-1.jpg' %}')"
+                style="background-image: url('{{workData.image.url}}'); background-size:300px 300px"
               ></div>
               <div class="col-md-7">
                 <div class="text pt-5 pl-0 pl-lg-5 pl-md-4 ftco-animate">
                   <div class="px-4 px-lg-4">
                     <div class="desc">
                       <div class="top">
-                        <span class="subheading">Web Design</span>
+                        <span class="subheading">{{workData.category}}</span>
                         <h2 class="mb-2">
-                          <a href="work.html">Cassette tape</a>
+                          <a>{{workData.title}}</a>
                         </h2>
                       </div>
                       <div class="absolute">
                         <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
+                      {{workData.description}}
                         </p>
-                        <div class="icon d-flex align-items-center mb-4">
-                          <div
-                            class="img"
-                            style="
-                              background-image: url('{% static 'images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg' %}');
-                            "
-                          ></div>
-                          <div class="position pl-3">
-                            <h4 class="mb-0">Jamie Jonson</h4>
-                            <span>avo.com</span>
-                          </div>
                         </div>
-                        <p><a href="#" class="custom-btn">View Portfolio</a></p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-12 portfolio-wrap">
-            <div class="row no-gutters align-items-center">
-              <div
-                class="col-md-5 order-md-last img"
-                style="
-                  background-image: url('{% static 'images/xwork-2.jpg.pagespeed.ic.T2SoxlicDm.jpg' %}');
-                "
-              ></div>
-              <div class="col-md-7">
-                <div class="text pt-5 pr-md-5 ftco-animate">
-                  <div class="px-4 px-lg-4">
-                    <div class="desc text-md-right">
-                      <div class="top">
-                        <span class="subheading">Application</span>
-                        <h2 class="mb-2">
-                          <a href="work.html">Miniwall Clock</a>
-                        </h2>
-                      </div>
-                      <div class="absolute">
-                        <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <div class="d-flex w-100">
-                          <div
-                            class="
-                              icon
-                              d-flex
-                              align-items-center
-                              ml-md-auto
-                              mb-4
-                            "
-                          >
-                            <div
-                              class="img"
-                              style="
-                                background-image: url('{% static 'images/xperson_2.jpg.pagespeed.ic.yyrmjBH91b.jpg' %}');
-                              "
-                            ></div>
-                            <div class="position pl-3 text-left">
-                              <h4 class="mb-0">Jamie Jonson</h4>
-                              <span>avo.com</span>
-                            </div>
-                          </div>
-                        </div>
-                        <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 portfolio-wrap">
-            <div class="row no-gutters align-items-center">
-              <div
-                class="col-md-5 img"
-                style="
-                  background-image: url('{% static 'images/xwork-3.jpg.pagespeed.ic.1pq2k5jPG_.jpg' %}');
-                "
-              ></div>
-              <div class="col-md-7">
-                <div class="text pt-5 pl-md-5 pl-md-4 ftco-animate">
-                  <div class="px-4 px-lg-4">
-                    <div class="desc">
-                      <div class="top">
-                        <span class="subheading">UI/UX Design</span>
-                        <h2 class="mb-2">
-                          <a href="work.html">Avo Portfolio Agency</a>
-                        </h2>
-                      </div>
-                      <div class="absolute">
-                        <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <div class="icon d-flex align-items-center mb-4">
-                          <div
-                            class="img"
-                            style="background-image: url(images/person_3.jpg)"
-                          ></div>
-                          <div class="position pl-3">
-                            <h4 class="mb-0">Jamie Jonson</h4>
-                            <span>avo.com</span>
-                          </div>
-                        </div>
-                        <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 portfolio-wrap">
-            <div class="row no-gutters align-items-center">
-              <div
-                class="col-md-5 order-md-last img"
-                style="
-                  background-image: url('{% static 'images/xwork-4.jpg.pagespeed.ic.CNVC9bC4Zc.jpg' %}');
-                "
-              ></div>
-              <div class="col-md-7">
-                <div class="text pt-5 pr-md-5 ftco-animate">
-                  <div class="px-4 px-lg-4">
-                    <div class="desc text-md-right">
-                      <div class="top">
-                        <span class="subheading">Web Development</span>
-                        <h2 class="mb-2">
-                          <a href="work.html">Hand Writing</a>
-                        </h2>
-                      </div>
-                      <div class="absolute">
-                        <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <div class="d-flex w-100">
-                          <div
-                            class="
-                              icon
-                              d-flex
-                              align-items-center
-                              ml-md-auto
-                              mb-4
-                            "
-                          >
-                            <div
-                              class="img"
-                              style="
-                                background-image: url('{% static 'images/xperson_2.jpg.pagespeed.ic.yyrmjBH91b.jpg' %}');
-                              "
-                            ></div>
-                            <div class="position pl-3 text-left">
-                              <h4 class="mb-0">Jamie Jonson</h4>
-                              <span>avo.com</span>
-                            </div>
-                          </div>
-                        </div>
-                        <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 portfolio-wrap">
-            <div class="row no-gutters align-items-center">
-              <div
-                class="col-md-5 img"
-                style="
-                  background-image: url('{% static 'images/xwork-5.jpg.pagespeed.ic.ZPLnAh6D9F.jpg' %}');
-                "
-              ></div>
-              <div class="col-md-7">
-                <div class="text pt-5 pl-md-5 pl-md-4 ftco-animate">
-                  <div class="px-4 px-lg-4">
-                    <div class="desc">
-                      <div class="top">
-                        <span class="subheading">Illustration</span>
-                        <h2 class="mb-2"><a href="work.html">Keyboard</a></h2>
-                      </div>
-                      <div class="absolute">
-                        <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <div class="icon d-flex align-items-center mb-4">
-                          <div
-                            class="img"
-                            style="
-                              background-image: url('{% static 'images/xperson_2.jpg.pagespeed.ic.yyrmjBH91b.jpg' %}');
-                            "
-                          ></div>
-                          <div class="position pl-3">
-                            <h4 class="mb-0">Jamie Jonson</h4>
-                            <span>avo.com</span>
-                          </div>
-                        </div>
-                        <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 portfolio-wrap">
-            <div class="row no-gutters align-items-center">
-              <div
-                class="col-md-5 order-md-last img"
-                style="
-                  background-image: url('{% static 'images/xwork-6.jpg.pagespeed.ic.v325xjLgoc.jpg' %}');
-                "
-              ></div>
-              <div class="col-md-7">
-                <div class="text pt-5 pr-md-5 ftco-animate">
-                  <div class="px-4 px-lg-4">
-                    <div class="desc text-md-right">
-                      <div class="top">
-                        <span class="subheading">Web Development</span>
-                        <h2 class="mb-2"><a href="work.html">Spiral</a></h2>
-                      </div>
-                      <div class="absolute">
-                        <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the
-                          blind texts.
-                        </p>
-                        <div class="d-flex w-100">
-                          <div
-                            class="
-                              icon
-                              d-flex
-                              align-items-center
-                              ml-md-auto
-                              mb-4
-                            "
-                          >
-                            <div
-                              class="img"
-                              style="
-                                background-image: url('{% static 'images/xperson_2.jpg.pagespeed.ic.yyrmjBH91b.jpg' %}');
-                              "
-                            ></div>
-                            <div class="position pl-3 text-left">
-                              <h4 class="mb-0">Jamie Jonson</h4>
-                              <span>avo.com</span>
-                            </div>
-                          </div>
-                        </div>
-                        <p><a href="#" class="custom-btn">View Portfolio</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+         
           </div>
         </div>
       </div>
+      {% endfor %}
+
+
       <div class="degree-left"></div>
     </section>
     <section class="ftco-section testimony-section">
@@ -569,124 +319,31 @@
         <div class="row ftco-animate mb-4">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
+
+              {% for clientData in client %}
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
                     <span class="fa fa-quote-left"></span>
                     <p class="mb-4">
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
+                      {{clientData.description}}
                     </p>
                     <div class="d-flex align-items-center">
                       <div
                         class="user-img"
                         style="
-                          background-image: url('{% static 'images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg' %}');
+                          background-image: url('{{clientData.image.url}}');
                         "
                       ></div>
                       <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
+                        <p class="name">{{clientData.name}}</p>
+                        <span class="position">{{clientData.designation}}</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="
-                          background-image: url('{% static 'images/xperson_2.jpg.pagespeed.ic.yyrmjBH91b.jpg' %}');
-                        "
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="background-image: url(images/person_3.jpg)"
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="
-                          background-image: url('{% static 'images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg' %}');
-                        "
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <span class="fa fa-quote-left"></span>
-                    <p class="mb-4">
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div
-                        class="user-img"
-                        style="
-                          background-image: url('{% static 'images/xperson_2.jpg.pagespeed.ic.yyrmjBH91b.jpg' %}');
-                        "
-                      ></div>
-                      <div class="pl-3">
-                        <p class="name">Roger Scott</p>
-                        <span class="position">Marketing Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -844,183 +501,6 @@
       </div>
       <div class="degree-left-footer"></div>
     </section>
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">avo</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries.
-              </p>
-              <ul class="ftco-footer-social list-unstyled mt-5">
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-twitter"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-facebook"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-instagram"></span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Community</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Projects</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Team</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Reviews</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>FAQs</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Our Story</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Meet the
-                    team</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Careers</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Company</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>About Us</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Press</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Contact</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><span class="fa fa-chevron-right mr-2"></span>Careers</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon fa fa-map"></span
-                    ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-envelope pr-4"></span
-                      ><span class="text"
-                        ><span
-                          class="__cf_email__"
-                          data-cfemail="3950575f567940564c4b5d5654585057175a5654"
-                          >[email&#160;protected]</span
-                        ></span
-                      ></a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              Copyright &copy;
-              <script
-                data-cfasync="false"
-                src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-              ></script>
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart" aria-hidden="true"></i> by
-              <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
-    </div>
     
-  
+    
 {% endblock body %}
