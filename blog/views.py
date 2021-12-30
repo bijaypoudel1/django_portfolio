@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib import messages
 
@@ -26,7 +26,7 @@ def blog_single(request,slug):
    return render(request,'blog/blog-single.html', context)
 
 
-def comment(request):
+def comment(request,slug):
    if request.method=="POST":
       name = request.POST['name']
       email = request.POST['email']
@@ -34,9 +34,19 @@ def comment(request):
       message = request.POST['message']
       fm = Comment(name=name,email=email,website=website,message=message)
       fm.save()
-      return render('blog_single')
+      q = Post.objects.filter(slug__iexact = slug)
+      if q.exists():
+         q = q.first()
+      else:
+         return HttpResponse('<h1>Post Not Found</h1>')
+      context = {
+      "page": "blog",
+      'post': q
+      }
+      return render(request,'blog/blog-single.html', context)
    else:
-      return messages.success(request, 'Form submission successful')
+      return HttpResponse('<h1>Post Not Found</h1>')
+
 
 
 

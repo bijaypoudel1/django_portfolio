@@ -163,7 +163,7 @@
 
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
-                <form action="{% url 'comment' %}" class="p-5" method = "POST">
+                <form action="{% url 'comment' post.slug %}" class="p-5" method = "POST">
                   {% csrf_token %}
                   <div class="form-group">
                     <label for="name">Name *</label>
