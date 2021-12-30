@@ -33,7 +33,7 @@
             >
               <div class="col-md-12 ftco-animate">
                 <div class="absolute">
-                  <h4 class="number" data-number="400">0</h4>
+                  <h4 class="number" data-number="50">0</h4>
                   <p>More than a hundred successful projects</p>
                 </div>
                 <div class="text">
@@ -44,7 +44,7 @@
                   </p>
                   <p class="mb-0">
                     <a
-                      href="#"
+                      href="{% url 'contact' %}"
                       class="btn btn-primary py-md-3 py-2 px-2 px-md-4"
                       >Start Project</a
                     >
@@ -86,7 +86,7 @@
             >
               <div class="col-md-12 ftco-animate">
                 <div class="absolute">
-                  <h4 class="number" data-number="21">0</h4>
+                  <h4 class="number" data-number="10">0</h4>
                   <p>Years of Experienced</p>
                 </div>
                 <div class="text">
@@ -226,7 +226,7 @@
                 paradisematic country, in which roasted parts of sentences fly
                 into your mouth.
               </p>
-              <p><a href="#" class="btn btn-primary">View all projects</a></p>
+              <p><a href="{% url 'work' %}" class="btn btn-primary">View all projects</a></p>
             </div>
           </div>
         </div>
@@ -362,7 +362,7 @@
                   Far far away, behind the word mountains, far from the
                   countries Vokalia and Consonantia, there live the blind texts.
                 </p>
-                <p><a href="#" class="btn btn-primary">Get started</a></p>
+                <p><a href="{% url 'contact' %}" class="btn btn-primary">Get started</a></p>
               </div>
             </div>
           </div>
@@ -377,127 +377,38 @@
           </div>
         </div>
         <div class="row d-flex">
+          {% for pd in post %}
           <div class="col-md-3 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
               <div class="text">
                 <h3 class="heading mb-3">
-                  <a href="#">Amplify your blockchain team</a>
+                  <a href="{% url 'blog_single' pd.slug %}">{{pd.title}}</a>
                 </h3>
                 <a
-                  href="blog-single.html"
+                  href="{% url 'blog_single' pd.slug %}"
                   class="block-20 img"
                   style="
-                    background-image: url('{% static 'images/ximage_1.jpg.pagespeed.ic.sYEsLcUyj_.jpg' %}');
+                    background-image: url('{{pd.image.url}}');
                   "
                 >
                 </a>
                 <div class="meta mb-3">
-                  <div><a href="#">June 01, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
+                  <div><a href="{% url 'blog_single' pd.slug %}">{{pd.time}}</a></div>
+                  <div><a href="{% url 'blog_single' pd.slug %}">{{pd.author}}</a></div>
+                  {% comment %} <div>
                     <a href="#" class="meta-chat"
                       ><span class="fa fa-comment"></span> 3</a
                     >
-                  </div>
+                  </div> {% endcomment %}
                 </div>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia.
+                 {{pd.content | truncatewords:15 | safe }}
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <div class="text">
-                <h3 class="heading mb-3">
-                  <a href="#">Amplify your blockchain team</a>
-                </h3>
-                <a
-                  href="blog-single.html"
-                  class="block-20 img"
-                  style="
-                    background-image: url('{% static 'images/ximage_2.jpg.pagespeed.ic.cSUVyMwItV.jpg' %}');
-                  "
-                >
-                </a>
-                <div class="meta mb-3">
-                  <div><a href="#">June 01, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
-                    <a href="#" class="meta-chat"
-                      ><span class="fa fa-comment"></span> 3</a
-                    >
-                  </div>
-                </div>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia.
-                </p>
-              </div>
-            </div>
+          {% endfor %}
           </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <div class="text">
-                <h3 class="heading mb-3">
-                  <a href="#">Amplify your blockchain team</a>
-                </h3>
-                <a
-                  href="blog-single.html"
-                  class="block-20 img"
-                  style="
-                    background-image: url(images/ximage_3.jpg.pagespeed.ic.5zztMSovUH.jpg);
-                  "
-                >
-                </a>
-                <div class="meta mb-3">
-                  <div><a href="#">June 01, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
-                    <a href="#" class="meta-chat"
-                      ><span class="fa fa-comment"></span> 3</a
-                    >
-                  </div>
-                </div>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <div class="text">
-                <h3 class="heading mb-3">
-                  <a href="#">Amplify your blockchain team</a>
-                </h3>
-                <a
-                  href="blog-single.html"
-                  class="block-20 img"
-                  style="
-                    background-image: url('{% static 'images/ximage_4.jpg.pagespeed.ic.0mxmKkOd81.jpg' %}');
-                  "
-                >
-                </a>
-                <div class="meta mb-3">
-                  <div><a href="#">June 01, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
-                    <a href="#" class="meta-chat"
-                      ><span class="fa fa-comment"></span> 3</a
-                    >
-                  </div>
-                </div>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="degree-left-footer"></div>
     </section>

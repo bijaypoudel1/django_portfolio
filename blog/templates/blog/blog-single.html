@@ -1,0 +1,349 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+<title>Blog</title>
+{% endblock title %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/A.animate.css+owl.carousel.min.css+owl.theme.default.min.css+magnific-popup.css+flaticon.css+style.css,Mcc.zBIrfNBVi8.css.pagespeed.cf.AH5fH9Hogd.css' %}">
+
+{% endblock css %}
+
+    {% block body %}
+    
+    <section
+      class="hero-wrap hero-wrap-2 degree-right"
+      style="
+        background-image: url('{% static 'images/xbg_2.jpg.pagespeed.ic.3R5oWwQV9w.jpg' %}');
+      "
+      data-stellar-background-ratio="0.5"
+    >
+
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end">
+          <div class="col-md-9 ftco-animate pb-5 mb-5">
+            <p class="breadcrumbs">
+              <span class="mr-2"
+                ><a href="index.html"
+                  >Home <i class="fa fa-chevron-right"></i></a
+              ></span>
+              <span class="mr-2"
+                ><a href="blog.html">Blog <i class="fa fa-chevron-right"></i></a
+              ></span>
+              <span>Blog Single <i class="fa fa-chevron-right"></i></span>
+            </p>
+            <h1 class="mb-3 bread">Blog Single</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ftco-animate">
+           
+           
+            <div>
+            <p>
+              <img
+                src="{{post.image.url}}"
+                alt=""
+                class="img-fluid"
+              />
+            </p>
+            <h2 class="mb-3">
+              {{post.title}}
+            </h2>
+            <p>
+              {{post.content | safe}}
+            </p>
+          </div>
+
+          
+            {% comment %} <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
+            <p>
+              Temporibus ad error suscipit exercitationem hic molestiae totam
+              obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora
+              maiores ex architecto voluptatum aut officia doloremque. Error
+              dolore voluptas, omnis molestias odio dignissimos culpa ex earum
+              nisi consequatur quos odit quasi repellat qui officiis reiciendis
+              incidunt hic non? Debitis commodi aut, adipisci.
+            </p> {% endcomment %}
+            {% comment %} <p>
+              <img
+                src="images/ximage_3.jpg.pagespeed.ic.5zztMSovUH.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </p>
+            <p>
+              Quisquam esse aliquam fuga distinctio, quidem delectus veritatis
+              reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non
+              tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
+              consectetur suscipit veritatis nulla quos quia aspernatur
+              perferendis, libero sint. Error, velit, porro. Deserunt minus,
+              quibusdam iste enim veniam, modi rem maiores.
+            </p> {% endcomment %}
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+              {% comment %} <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">house</a>
+                <a href="#" class="tag-cloud-link">home</a>
+                <a href="#" class="tag-cloud-link">building</a>
+                <a href="#" class="tag-cloud-link">Travel</a>
+              </div>  {% endcomment %}
+            </div>
+             <div class="about-author d-flex p-4">
+              {% comment %} <div class="bio mr-5">
+                <img
+                  src="{% static 'images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg' %}"
+                  alt="Image placeholder"
+                  class="img-fluid mb-4"
+                />
+              </div> {% endcomment %}
+              <div class="desc">
+                {% comment %} <h3>George Washington</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                  delectus aut, sunt placeat nam vero culpa sapiente consectetur
+                  similique, inventore eos fugit cupiditate numquam!
+                </p> {% endcomment %}
+              </div> 
+            </div>
+            <div class="pt-5 mt-5">
+              <h3 class="mb-5"> Comments</h3>
+              <ul class="comment-list">
+
+
+                <li class="comment">
+                  
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">Jul 22, 2020 at 2:21pm</div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    {% comment %} <p><a href="#" class="reply">Reply</a></p> {% endcomment %}
+                  </div>
+                
+                      </ul>
+                    </li>
+                
+              
+                {% comment %} <li class="comment">
+                  <div class="vcard bio">
+                    <img
+                      src="{% static 'images/xperson_1.jpg.pagespeed.ic.P4pHl6glbj.jpg' %}"
+                      alt="Image placeholder"
+                    />
+                  </div>
+                  <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">Jul 22, 2020 at 2:21pm</div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>
+              </ul> {% endcomment %}
+
+              <div class="comment-form-wrap pt-5">
+                <h3 class="mb-5">Leave a comment</h3>
+                <form action="{% url 'comment' %}" class="p-5" method = "POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" class="form-control" id="name" name="name"  />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email" name= "email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" class="form-control" id="website" name="website" />
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      class="form-control"
+                      name = "message"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      value="Post Comment"
+                      class="btn py-3 px-4 btn-primary"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 sidebar ftco-animate">
+            <div class="sidebar-box">
+              <form action="#" class="search-form">
+                <div class="form-group">
+                  <span class="icon fa fa-search"></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="sidebar-box ftco-animate">
+              <div class="categories">
+                <h3>Categories</h3>
+                <li>
+                  <a href="#">Web Developmnent <span>(12)</span></a>
+                </li>
+                <li>
+                  <a href="#">Web Design <span>(22)</span></a>
+                </li>
+                <li>
+                  <a href="#">UI/UX Design <span>(37)</span></a>
+                </li>
+                <li>
+                  <a href="#">Graphic Design <span>(42)</span></a>
+                </li>
+                <li>
+                  <a href="#">Application <span>(14)</span></a>
+                </li>
+                <li>
+                  <a href="#">Illustration <span>(20)</span></a>
+                </li>
+                <li>
+                  <a href="#">Branding <span>(10)</span></a>
+                </li>
+              </div>
+            </div>
+            <div class="sidebar-box ftco-animate">
+              <h3>Recent Blog</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a
+                  class="blog-img mr-4"
+                  style="
+                    background-image: url('{% static 'images/ximage_1.jpg.pagespeed.ic.sYEsLcUyj_.jpg' %}');
+                  "
+                ></a>
+                <div class="text">
+                  <h3 class="heading">
+                    <a href="#">Amplify your blockchain team</a>
+                  </h3>
+                  <div class="meta">
+                    <div>
+                      <a href="#"
+                        ><span class="icon-calendar"></span> Jul 22, 2020</a
+                      >
+                    </div>
+                    <div>
+                      <a href="#"><span class="icon-person"></span> Admin</a>
+                    </div>
+                    <div>
+                      <a href="#"><span class="icon-chat"></span> 19</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a
+                  class="blog-img mr-4"
+                  style="
+                    background-image: url('{% static 'images/ximage_2.jpg.pagespeed.ic.cSUVyMwItV.jpg' %}');
+                  "
+                ></a>
+                <div class="text">
+                  <h3 class="heading">
+                    <a href="#">Amplify your blockchain team</a>
+                  </h3>
+                  <div class="meta">
+                    <div>
+                      <a href="#"
+                        ><span class="icon-calendar"></span> Jul 22, 2020</a
+                      >
+                    </div>
+                    <div>
+                      <a href="#"><span class="icon-person"></span> Admin</a>
+                    </div>
+                    <div>
+                      <a href="#"><span class="icon-chat"></span> 19</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a
+                  class="blog-img mr-4"
+                  style="
+                    background-image: url(images/ximage_3.jpg.pagespeed.ic.5zztMSovUH.jpg);
+                  "
+                ></a>
+                <div class="text">
+                  <h3 class="heading">
+                    <a href="#">Amplify your blockchain team</a>
+                  </h3>
+                  <div class="meta">
+                    <div>
+                      <a href="#"
+                        ><span class="icon-calendar"></span> Jul 22, 2020</a
+                      >
+                    </div>
+                    <div>
+                      <a href="#"><span class="icon-person"></span> Admin</a>
+                    </div>
+                    <div>
+                      <a href="#"><span class="icon-chat"></span> 19</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="sidebar-box ftco-animate">
+              {% comment %} <h3>Tag Cloud</h3>
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">web</a>
+                <a href="#" class="tag-cloud-link">design</a>
+                <a href="#" class="tag-cloud-link">graphic</a>
+                <a href="#" class="tag-cloud-link">ui</a>
+                <a href="#" class="tag-cloud-link">ux</a>
+                <a href="#" class="tag-cloud-link">apps</a>
+                <a href="#" class="tag-cloud-link">programming</a>
+                <a href="#" class="tag-cloud-link">development</a>
+              </div> {% endcomment %}
+            </div> 
+            <div class="sidebar-box ftco-animate">
+              {% comment %} <h3>Paragraph</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                delectus aut, sunt placeat nam vero culpa sapiente consectetur
+                similique, inventore eos fugit cupiditate numquam!
+              </p> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    {% endblock body %}
